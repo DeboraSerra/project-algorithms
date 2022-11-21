@@ -4,7 +4,7 @@ def is_anagram(first_string, second_string):
     list_word_one = [letter for letter in first_word]
     list_word_two = [letter for letter in second_word]
     sort_word(list_word_one, 0, len(list_word_one) - 1)
-    sort_word(list_word_two, 0, len(list_word_two)- 1)
+    sort_word(list_word_two, 0, len(list_word_two) - 1)
     is_anagram = list_word_one == list_word_two
     if first_string == "" or second_string == "":
         is_anagram = False
