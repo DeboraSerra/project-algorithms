@@ -1,10 +1,6 @@
-def is_palindrome_iterative(word):
-    """Faça o código aqui."""
-    if len(word) == 0:
-        return False
-    low_index, high_index = 0, len(word) - 1
+def get_is_palindrome(word, low_index, high_index):
     is_palindrome = False
-    while is_palindrome == False:
+    while is_palindrome is False:
         if low_index == high_index:
             is_palindrome = True
         elif high_index >= (len(word) // 2):
@@ -14,3 +10,11 @@ def is_palindrome_iterative(word):
         else:
             return False
     return is_palindrome
+
+
+def is_palindrome_iterative(word):
+    """Faça o código aqui."""
+    if len(word) == 0:
+        return False
+    low_index, high_index = 0, len(word) - 1
+    return get_is_palindrome(word, low_index, high_index)
